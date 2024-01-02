@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameProfile"
+    android:layout_width="@dimen/_180sdp"
+    android:layout_height="@dimen/_180sdp"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_gravity="center"
+    android:background="@drawable/ic_star_bg"
+    android:backgroundTint="@color/gray_light">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileCard"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/gray_light"
+        app:cardCornerRadius="@dimen/_60sdp"
+        app:cardElevation="0dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_profile_white"
+            app:shapeAppearance="@style/CircleImageStyle" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

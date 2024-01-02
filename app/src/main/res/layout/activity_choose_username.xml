@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootView"
+        tools:context=".view.activities.authentication.ChooseUsernameActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/btnNext"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                style="@style/BackButtonStyle"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@null"
+                android:onClickListener="@{listener}"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtChooseUserName"
+                style="@style/LightSemiBoldTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_23sdp"
+                android:text="@string/choose_your_username"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+            <LinearLayout
+                android:id="@+id/parentFullName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_43sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/shape_corner_7"
+                android:backgroundTint="@color/white"
+                android:gravity="center|start"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtFullName"
+                    style="@style/DefaultTextInputEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_weight="100"
+                    android:autofillHints="name"
+                    android:background="@drawable/shape_corner_10"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/your_full_name"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/_8sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/parentUsername"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_43sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/shape_corner_7"
+                android:backgroundTint="@color/white"
+                android:gravity="center|start"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtUserName"
+                    style="@style/DefaultTextInputEditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_weight="70"
+                    android:autofillHints="username"
+                    android:background="@drawable/shape_corner_10"
+                    android:backgroundTint="@color/white"
+                    android:digits="0,1,2,3,4,5,6,7,8,9,qwertzuiopasdfghjklyxcvbnm,_"
+                    android:drawableStart="@drawable/ic_round_alternate_email_24"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:gravity="center|start"
+                    android:hint="@string/username"
+                    android:inputType="textPersonName"
+                    android:maxLength="18"
+                    android:maxLines="1"
+                    android:padding="@dimen/_8sdp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30">
+
+                    <TextView
+                        android:id="@+id/taken"
+                        style="@style/DarkRegularTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:text="@string/taken"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ic_verified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/round_check_24"
+                        android:visibility="invisible" />
+
+                    <ProgressBar
+                        android:id="@+id/pb"
+                        style="@android:style/Widget.ProgressBar.Large.Inverse"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="@style/DefaultActionButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:layout_marginBottom="16dp"
+            android:onClickListener="@{listener}"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="@string/next"
+            app:icon="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Rajkul" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorDark</item>
+        <item name="android:windowBackground">@color/colorDark</item>
+    </style>
+
+    <style name="BaseHomeBottomNavActiveStyle" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/colorLight</item>
+    </style>
+
+    <!-- Button Styling -->
+
+    <style name="BaseDefaultActionButtonStyle" parent="BaseRootActionButtonStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:backgroundTint">@color/colorLight</item>
+    </style>
+
+    <style name="BaseDefaultStrokeButtonStyle" parent="BaseRootActionButtonStyle">
+        <item name="android:textColor">@color/colorLight</item>
+        <item name="android:backgroundTint">@color/colorDark</item>
+        <item name="strokeColor">@color/colorLight</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+    </style>
+
+    <style name="BaseRootActionButtonStyle">
+        <item name="android:padding">@dimen/_11sdp</item>
+        <item name="cornerRadius">@dimen/_7sdp</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/vdu_semi_bold</item>
+    </style>
+
+    <!-- Text Styling-->
+
+    <style name="BaseDarkRegularTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/vdu_regular</item>
+    </style>
+
+    <style name="BaseDarkBoldTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/vdu_bold</item>
+    </style>
+
+    <style name="BaseDarkSemiBoldTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/vdu_semi_bold</item>
+    </style>
+
+    <style name="BasePrimaryLightTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/vdu_light</item>
+    </style>
+
+    <style name="BasePrimaryRegularTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/vdu_regular</item>
+    </style>
+
+    <style name="BasePrimaryBoldTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/vdu_bold</item>
+    </style>
+
+    <style name="BasePrimarySemiBoldTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/vdu_semi_bold</item>
+    </style>
+
+    <style name="BaseDarkLightTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/vdu_light</item>
+    </style>
+
+    <style name="BaseLightRegularTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/vdu_regular</item>
+    </style>
+
+    <style name="BaseLightBoldTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/vdu_bold</item>
+    </style>
+
+    <style name="BaseLightSemiBoldTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/vdu_semi_bold</item>
+    </style>
+
+    <style name="BaseLightLightTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/vdu_light</item>
+    </style>
+
+
+    <style name="BaseRootTextStyle">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:fontFamily">@font/vdu_light</item>
+    </style>
+
+
+    <!--  Edit Text Styling  -->
+
+    <style name="BaseDefaultEditTextStyle" parent="BaseRootEditTextStyle">
+        <item name="android:fontFamily">@font/vdu_light</item>
+    </style>
+
+    <style name="BaseSearchTextStyle" parent="BaseRootEditTextStyle">
+        <item name="android:fontFamily">@font/vdu_light</item>
+    </style>
+
+    <style name="BaseRootEditTextStyle">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/vdu_light</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="android:background">@drawable/shape_corner_7</item>
+        <item name="hintTextColor">@color/gray_light</item>
+    </style>
+
+    <style name="BaseEditTextStyleFilled" parent="BaseRootEditTextStyle">
+        <item name="android:fontFamily">@font/vdu_light</item>
+        <item name="background">@null</item>
+    </style>
+
+<!--    Image styling-->
+
+    <style name="SemiCircleImageStyle" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">40%</item>
+    </style>
+
+    <style name="CircleImageStyle" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <!--  Dialog Styling   -->
+
+    <style name="BaseBottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheetBackground</item>
+    </style>
+
+    <style name="BaseBottomSheetDialogStyle32" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheetBackground32</item>
+    </style>
+
+    <style name="BaseBottomSheetDialogStyleTransparent" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BaseBottomSheetBackgroundTransparent</item>
+    </style>
+
+    <style name="BaseBottomSheetBackground" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/shape_corner_top</item>
+    </style>
+
+    <style name="BaseBottomSheetBackground32" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/top_corner_shape_32</item>
+    </style>
+
+    <style name="BaseBottomSheetBackgroundTransparent" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+
+    <style name="BaseRoundedCornersDialog" parent="@style/Theme.MaterialComponents.Dialog">
+        <item name="dialogCornerRadius">@dimen/_14sdp</item>
+    </style>
+
+</resources>

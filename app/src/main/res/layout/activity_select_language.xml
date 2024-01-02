@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:padding="@dimen/_20ssp"
+        android:id="@+id/rootView"
+        tools:context=".view.activities.authentication.SelectLanguageActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_nyour_language"
+                style="@style/LightSemiBoldTextStyle"
+                android:id="@+id/txtChooseLanguage"
+                android:textSize="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_20ssp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:onClickListener="@{listener}"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    app:strokeColor="@color/colorLight"
+                    android:padding="@dimen/_20sdp"
+                    android:id="@+id/cardHindi"
+                    app:cardBackgroundColor="@color/colorPrimaryLight">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LightSemiBoldTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/h_namaste" />
+
+                        <TextView
+                            style="@style/LightRegularTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/h_hindi"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/round_check_24"
+                        android:layout_gravity="end|bottom"
+                        app:tint="@color/white"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:id="@+id/imgCheckHindi" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:id="@+id/cardSanskrit"
+                    app:strokeColor="@color/colorLight"
+                    android:orientation="vertical"
+                    android:onClickListener="@{listener}"
+                    android:padding="@dimen/_20sdp"
+                    app:cardBackgroundColor="@color/colorPrimaryLight">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LightSemiBoldTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/h_namaste" />
+
+                        <TextView
+                            style="@style/LightRegularTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="संस्कृत"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/round_check_24"
+                        android:layout_gravity="end|bottom"
+                        app:tint="@color/white"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:id="@+id/imgCheckSanskrit" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:id="@+id/cardRajasthani"
+                    android:onClickListener="@{listener}"
+                    app:strokeColor="@color/colorLight"
+                    android:padding="@dimen/_20sdp"
+                    app:cardBackgroundColor="@color/colorPrimaryLight">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LightSemiBoldTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/khamma_ghani" />
+
+                        <TextView
+                            style="@style/LightRegularTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="राजस्थानी(राजपूती)"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/round_check_24"
+                        android:layout_gravity="end|bottom"
+                        app:tint="@color/white"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:id="@+id/imgCheckRajasthani" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:id="@+id/cardEnglish"
+                    android:onClickListener="@{listener}"
+                    app:strokeColor="@color/colorLight"
+                    android:padding="@dimen/_20sdp"
+                    app:cardBackgroundColor="@color/colorPrimaryLight">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/LightSemiBoldTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hello!" />
+
+                        <TextView
+                            style="@style/LightRegularTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="English"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/round_check_24"
+                        android:layout_gravity="end|bottom"
+                        app:tint="@color/white"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:id="@+id/imgCheckEnglish" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DefaultActionButtonStyle"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="@string/str_continue"
+                app:icon="@drawable/ic_arrow_right"
+                android:onClickListener="@{listener}"
+                app:iconGravity="textEnd"
+                android:id="@+id/btnContinue"
+                app:iconTint="@color/black"
+                app:iconPadding="@dimen/_15sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+</layout>

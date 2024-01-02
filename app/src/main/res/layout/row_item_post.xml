@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    android:backgroundTint="@color/colorPrimaryLight"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_12sdp"
+    app:cardCornerRadius="@dimen/_20sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/parentProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                app:shapeAppearance="@style/SemiCircleImageStyle"
+                app:srcCompat="@color/colorLight" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_gravity="center"
+                app:shapeAppearance="@style/SemiCircleImageStyle"
+                app:srcCompat="@color/white" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/story_profile_photo"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_gravity="center"
+                app:shapeAppearance="@style/SemiCircleImageStyle"
+                android:background="@drawable/story_border_purple_rounded"
+                android:src="@drawable/post"
+                android:contentDescription="@string/profile_picture" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LightSemiBoldTextStyle"
+            android:layout_marginStart="@dimen/_20ssp"
+            android:text="@string/kuldeep_bairwa"
+            app:layout_constraintBottom_toTopOf="@+id/post_time"
+            app:layout_constraintStart_toEndOf="@+id/parentProfile"
+            app:layout_constraintTop_toTopOf="@+id/parentProfile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_45_sec_ago"
+            style="@style/LightRegularTextStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/parentProfile"
+            app:layout_constraintStart_toStartOf="@+id/userName"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_more_vert_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/parentProfile"
+            android:contentDescription="@string/more" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/postImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_more_vert_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/parentProfile"
+            android:contentDescription="@string/more" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpPostPhoto"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parentProfile"
+            />
+
+        <RelativeLayout
+            android:id="@+id/parentRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintTop_toBottomOf="@id/vpPostPhoto"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/like"
+                android:src="@drawable/baseline_favorite_border_24" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/comment"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_toEndOf="@+id/like"
+                android:src="@drawable/baseline_chat_24" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/share"
+                android:layout_toEndOf="@+id/comment"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:src="@drawable/baseline_send_24" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:src="@drawable/baseline_bookmark_border_24" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLikes"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/_100"
+            style="@style/LightSemiBoldTextStyle"
+            app:layout_constraintTop_toBottomOf="@id/parentRelative"
+            app:layout_constraintStart_toStartOf="@id/parentRelative"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/likes"
+            style="@style/LightSemiBoldTextStyle"
+            app:layout_constraintStart_toEndOf="@id/tvLikes"
+            app:layout_constraintTop_toTopOf="@id/tvLikes"
+            app:layout_constraintBottom_toBottomOf="@id/tvLikes"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/caption"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/get_traditional_rajputi_clothes_at_resonable_price"
+            android:ellipsize="marquee"
+            style="@style/LightRegularTextStyle"
+            app:layout_constraintTop_toBottomOf="@id/tvLikes"
+            app:layout_constraintStart_toStartOf="@id/tvLikes"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

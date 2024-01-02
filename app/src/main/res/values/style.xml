@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="colorDark">#192436</color>
+    <color name="colorLight">#fbd6a1</color>
+    <color name="colorLight2">#F6C681</color>
+    <color name="colorPrimaryLight">#283956</color>
+
+    <!-- Light application theme. -->
+
+    <style name="Theme.Rajkul" parent="Base.Theme.Rajkul">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorDark</item>
+        <item name="android:windowBackground">@color/colorDark</item>
+    </style>
+
+    <style name="HomeBottomNavActiveStyle" parent="BaseHomeBottomNavActiveStyle">
+        <item name="android:color">@color/colorLight</item>
+    </style>
+
+    <!-- Button Styling -->
+
+    <style name="DefaultActionButtonStyle" parent="RootActionButtonStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:backgroundTint">@color/colorLight</item>
+        <item name="iconTint">@color/colorDark</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="iconPadding">@dimen/_10sdp</item>
+    </style>
+
+    <style name="DefaultStrokeButtonStyle" parent="RootActionButtonStyle">
+        <item name="android:textColor">@color/colorLight</item>
+        <item name="android:backgroundTint">@color/colorDark</item>
+        <item name="strokeColor">@color/colorLight</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="iconTint">@color/colorLight</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="iconPadding">@dimen/_10sdp</item>
+    </style>
+
+    <style name="RootActionButtonStyle" parent="BaseRootActionButtonStyle">
+        <item name="android:padding">@dimen/_11sdp</item>
+        <item name="cornerRadius">@dimen/_7sdp</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/laila_semi_bold</item>
+    </style>
+
+    <!-- Text Styling-->
+
+    <style name="DarkRegularTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/laila_regular</item>
+    </style>
+
+    <style name="DarkBoldTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/laila_bold</item>
+    </style>
+
+    <style name="DarkSemiBoldTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/laila_semi_bold</item>
+    </style>
+
+    <style name="PrimaryLightTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/laila_light</item>
+    </style>
+
+    <style name="PrimaryRegularTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/laila_regular</item>
+    </style>
+
+    <style name="PrimaryBoldTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/laila_bold</item>
+    </style>
+
+    <style name="PrimarySemiBoldTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:fontFamily">@font/laila_semi_bold</item>
+    </style>
+
+    <style name="DarkLightTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/laila_light</item>
+    </style>
+
+    <style name="LightRegularTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/laila_regular</item>
+    </style>
+
+    <style name="LightBoldTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/laila_bold</item>
+    </style>
+
+    <style name="LightSemiBoldTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/laila_semi_bold</item>
+    </style>
+
+    <style name="LightLightTextStyle" parent="RootTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/laila_light</item>
+    </style>
+
+    <style name="RootTextStyle" parent="BaseRootTextStyle">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:fontFamily">@font/laila_light</item>
+    </style>
+
+
+    <style name="DefaultTextInputStyle" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="cornerRadius">@dimen/_4sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_4sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_4sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_4sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="colorControlActivated">@android:color/transparent</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+    </style>
+
+
+    <style name="DefaultTextInputEditTextStyle" parent="">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColorHint">@color/gray_dark</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/laila_regular</item>
+    </style>
+
+
+    <!--  Edit Text Styling  -->
+
+    <style name="DefaultEditTextStyle" parent="RootEditTextStyle">
+        <item name="android:fontFamily">@font/laila_light</item>
+    </style>
+
+    <style name="SearchTextStyle" parent="RootEditTextStyle">
+        <item name="android:fontFamily">@font/laila_light</item>
+    </style>
+
+
+    <style name="EditTextStyleFilled" parent="RootEditTextStyle">
+        <item name="android:fontFamily">@font/laila_light</item>
+        <item name="background">@null</item>
+    </style>
+
+    <style name="RootEditTextStyle" parent="BaseRootEditTextStyle">
+
+    </style>
+
+
+    <style name="SearchBoxParentStyle" parent="">
+        <item name="android:background">@drawable/shape_corner_10</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:elevation">@dimen/_8sdp</item>
+        <item name="android:editTextStyle">@style/DefaultTextInputEditTextStyle</item>
+        <item name="drawableTint">@color/colorDark</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/colorDark
+        </item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/colorDark</item>
+
+    </style>
+
+    <style name="SearchIconStyle">
+        <item name="tint">@color/colorDark</item>
+    </style>
+
+    <style name="SearchEditTextStyle">
+        <item name="fontFamily">@font/laila_semi_bold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:textColorHint">@color/colorPrimaryLight</item>
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:hint">@string/str_search_country</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_color_primary</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="BackButtonStyle" parent="">
+        <item name="android:background">@drawable/shape_corner_10</item>
+        <item name="android:backgroundTint">@color/gray_light</item>
+        <item name="android:src">@drawable/ic_round_arrow_back_ios_24</item>
+        <item name="android:tint">@color/black</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+    </style>
+
+    <!--  Dialog Styling   -->
+
+    <style name="BottomSheetDialogStyle" parent="BaseBottomSheetDialogStyle">
+
+    </style>
+
+    <style name="BottomSheetDialogStyle32" parent="BaseBottomSheetDialogStyle32"></style>
+
+    <style name="BottomSheetDialogStyleTransparent" parent="BaseBottomSheetDialogStyleTransparent">
+
+    </style>
+
+    <style name="BottomSheetBackground" parent="BaseBottomSheetBackground">
+
+    </style>
+
+    <style name="BottomSheetBackground32" parent="BaseBottomSheetBackground32">
+
+    </style>
+
+    <style name="RoundedCornersDialog" parent="BaseRoundedCornersDialog"></style>
+
+
+    <string name="str_search_country">Search for a country</string>
+</resources>

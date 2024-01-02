@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">राजकुल</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_back">Welcome Back !</string>
+    <string name="kuldeep_bairwa">Kuldeep Bairwa</string>
+    <string name="hi">Hi, </string>
+    <string name="you">You</string>
+    <string name="_45_sec_ago">45 Sec Ago</string>
+    <string name="more">more</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="_100">100 </string>
+    <string name="likes"> Likes</string>
+    <string name="get_traditional_rajputi_clothes_at_resonable_price">Get traditional rajputi clothes at resonable price!</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="kuldeep">kuldeep</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="_112k">112k</string>
+    <string name="follow">Follow</string>
+    <string name="home">Home</string>
+    <string name="notifications">Notifications</string>
+    <string name="create">Create</string>
+    <string name="chat">Chat</string>
+    <string name="market_place">Market Place</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="conversation">Conversation</string>
+    <string name="mentioned_you_in_a_post">" mentioned you in a post"</string>
+    <string name="atr">\@</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="choose">Choose</string>
+    <string name="h_namaste">नमस्ते!</string>
+    <string name="h_hindi">हिंदी</string>
+    <string name="str_continue">आगे पधारें</string>
+    <string name="choose_nyour_language">आपकी भाषा\nचुनो सा</string>
+    <string name="our_nheritage">आपणी\nविरासत</string>
+</resources>

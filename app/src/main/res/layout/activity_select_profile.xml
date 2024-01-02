@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:id="@+id/rootView"
+        tools:context=".view.activities.authentication.SelectProfileActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/BackButtonStyle"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:contentDescription="@null"
+            android:onClickListener="@{listener}"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/LightSemiBoldTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_23sdp"
+            android:text="@string/add_profile_picture"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/profileView"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintBottom_toTopOf="@+id/llBtn"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle">
+
+            <include
+                android:id="@+id/profileLayout"
+                layout="@layout/layout_profile_" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/llBtn"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/profileView"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/take_photo"
+                style="@style/DefaultActionButtonStyle"
+                android:id="@+id/btnTakePhoto"
+                android:onClickListener="@{listener}"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:icon="@drawable/ic_camera_white"
+                android:paddingVertical="@dimen/_11sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_from_gallery"
+                style="@style/DefaultActionButtonStyle"
+                android:id="@+id/btnUploadPhoto"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:onClickListener="@{listener}"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:icon="@drawable/round_insert_photo_24"
+                android:paddingVertical="@dimen/_11sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Looking Good"
+                style="@style/DefaultStrokeButtonStyle"
+                android:id="@+id/btnLookingGood"
+                android:onClickListener="@{listener}"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:icon="@drawable/ic_arrow_right"
+                android:paddingVertical="@dimen/_11sdp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

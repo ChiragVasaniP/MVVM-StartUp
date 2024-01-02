@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/shape_corner_top"
+        android:id="@+id/rootView"
+        tools:context=".usermodule.information.choosecountry.ChooseCountry">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corner_top"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/white"
+                app:scrimAnimationDuration="200"
+                android:background="@drawable/shape_corner_top"
+                android:id="@+id/collapsingToolbar"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:title=" ">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        style="@style/DarkSemiBoldTextStyle"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Choose your country"  />
+
+                    <LinearLayout
+                        android:id="@+id/parentSearchBox"
+                        style="@style/SearchBoxParentStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_43sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center|start"
+                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:weightSum="100"
+                        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTitle">
+
+                        <ImageView
+                            android:id="@+id/ic_verified"
+                            android:layout_width="0dp"
+                            android:layout_weight="10"
+                            style="@style/SearchIconStyle"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_gravity="end|center"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_round_search_24"  />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtSearch"
+                            style="@style/SearchEditTextStyle"
+                            android:layout_width="0dp"
+                            android:imeOptions="actionSearch"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:layout_weight="90"
+                            android:autofillHints="@null"
+                            android:inputType="text"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_8sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    app:layout_collapseMode="pin"
+                    android:background="@drawable/shape_corner_top"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                    app:title="  ">
+
+                    <ImageButton
+                        android:id="@+id/btnBack"
+                        style="@style/BackButtonStyle"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@null"
+                        android:onClickListener="@{listener}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_countries"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/parentSearchBox"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            android:layout_marginTop="@dimen/_10sdp"
+            tools:listitem="@layout/row_item_countries"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_result_found"
+            app:layout_constraintTop_toBottomOf="@+id/parentSearchBox"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            android:id="@+id/txtNoResult"
+            android:visibility="invisible"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            style="@style/DefaultActionButtonStyle"
+            android:id="@+id/btnNextOnKeyBoardOpen"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_250sdp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            android:onClickListener="@{listener}"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:icon="@drawable/ic_arrow_right"
+            app:iconTint="@color/colorDark"
+            app:iconPadding="@dimen/_10sdp"
+            app:iconGravity="textEnd"
+            android:paddingVertical="@dimen/_11sdp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            style="@style/DefaultActionButtonStyle"
+            android:id="@+id/btnNext"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_7sdp"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            android:onClickListener="@{listener}"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:icon="@drawable/ic_arrow_right"
+            app:iconTint="@color/colorDark"
+            app:iconPadding="@dimen/_10sdp"
+            app:iconGravity="textEnd"
+            android:paddingVertical="@dimen/_11sdp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

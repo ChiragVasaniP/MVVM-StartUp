@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rootView"
+        android:background="?attr/selectableItemBackground"
+        android:onClickListener="@{listener}"
+        android:padding="@dimen/_10sdp">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            app:srcCompat="@drawable/post"
+            app:shapeAppearance="@style/CircleImageStyle" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LightSemiBoldTextStyle"
+                android:text="Username"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:id="@+id/txtName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LightRegularTextStyle"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="Last message"
+                android:id="@+id/txtLastMessage" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

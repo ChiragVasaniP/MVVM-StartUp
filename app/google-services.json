@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "381679646077",
+    "project_id": "rajkul-9e134",
+    "storage_bucket": "rajkul-9e134.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381679646077:android:702a3731bb9b0315b48814",
+        "android_client_info": {
+          "package_name": "com.dr.rajkul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381679646077-ca4godeh3ts9sl7ajl6n67gccdp5jq8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAojke5jwLwwF1JC4UwcxjWKB-SYkeg56k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381679646077-ca4godeh3ts9sl7ajl6n67gccdp5jq8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

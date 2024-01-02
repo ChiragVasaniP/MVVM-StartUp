@@ -1,0 +1,38 @@
+/app/build/intermediates/
+/app/build/generated/
+/app/build/tmp
+/visasdk/build/intermediates
+/visasdk/build/generated
+/visasdk/build/tmp
+/app/build/kotlin/compileDebugKotlin/
+/.gradle/
+/.idea/
+/local.properties
+*.apk
+*.ap_
+*.aab
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+# OSX files
+.DS_Store
+
+# Android Studio
+*.iml
+.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+.gradle
+build/
+.navigation
+captures/
+output.json
+
+#NDK
+obj/
+.externalNativeBuild
